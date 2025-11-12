@@ -100,3 +100,27 @@ html.show-sw .lang-sw-table-row {
   /* Make sure we have the WhatsApp icon color */
   fill: currentColor; 
 }
+/* =====================================================
+  Custom Product Card Styles
+  (To match your screenshot)
+  =====================================================
+*/
+.product-card {
+  /* This class is a container, no extra styles needed */
+  /* Tailwind in index.html handles the rest */
+}
+
+.whatsapp-button {
+  /* This is where we use @apply to use Tailwind's classes.
+    bg-blue-900 is the dark blue for light mode.
+    dark:bg-blue-800 is the slightly lighter blue for dark mode.
+  */
+  @apply bg-blue-900 dark:bg-blue-800 text-white text-sm font-bold;
+  @apply py-2 px-4 rounded-full;
+  @apply flex items-center justify-center;
+  @apply transition-all duration-200;
+  @apply hover:bg-blue-700 dark:hover:bg-blue-600;
+  @apply hover:shadow-lg;
+  /* This makes the WhatsApp icon inside the button white */
+  fill: currentColor; 
+}
