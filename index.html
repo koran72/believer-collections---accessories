@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- 
+  The 'lang' attribute will be 'en' by default.
+  The 'dark' class will be added by script.js for dark mode.
+  The 'show-sw' class will be added by script.js for Swahili.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Believer Collections and Accessories</title>
+    
+    <!-- External Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        /* This script configures the Tailwind CDN. 
+          It's kept here to run before Tailwind styles are applied.
+        */
+        tailwind.config = {
+            darkMode: 'class', // Enable class-based dark mode
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#007bff', // Example primary color
+                            secondary: '#6c757d' // Example secondary color
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+
+    <!-- 
+      Floating Header 
+    -->
+    <header class="sticky top-4 z-50">
+        <nav class="container mx-auto max-w-5xl mt-4 px-4">
+            <div class="flex items-center justify-between bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg shadow-xl rounded-3xl p-4">
+                
+                <div class="flex items-center space-x-3">
+                    <!-- 1. Logo Section (as a link) -->
+                    <a href="#" aria-label="Believer Collections Homepage">
+                        <img src="https://placehold.co/50x50/4a5568/ffffff?text=B" alt="Believer Collections Logo" class="h-10 w-10 md:h-12 md:w-12 rounded-full">
+                    </a>
+                    
+                    <!-- 2. Boutique Name Section (as text) -->
+                    <div class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
+                        <span class="lang-en">Believer Collections</span>
+                        <span class="lang-sw">Believer Collections</span>
+                    </div>
+                </div>
+
+                <!-- Controls: Language and Dark Mode -->
+                <div class="flex items-center space-x-3 md:space-x-5">
+                    
+                    <!-- Language Toggle -->
+                    <button id="lang-toggle" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-primary transition-colors" title="Badilisha Lugha / Switch Language">
+                        <span class="lang-en">Swahili</span>
+                        <span class="lang-sw">English</span>
+                    </button>
+
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="theme-toggle" class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" title="Toggle Dark/Light Mode">
+                        <!-- 
+                          *** THE FIX IS HERE ***
+                          I removed the 'hidden' class from the dark icon (the moon).
+                          Now it will show up by default.
+                        -->
+                        <svg id="theme-toggle-dark-icon" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607l-.707-.707a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-1.636 4.95l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1zM6.536 6.536l-.707-.707a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414zM4.95 17.464l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414-1.414zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto max-w-5xl p-4 mt-8">
+        
+        <!-- 
+          Advertising Banner 
+        -->
+        <section class="bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-700 dark:to-purple-800 text-white rounded-3xl shadow-lg p-8 md:p-12 mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">
+                <span class="lang-en">Trending Now</span>
+                <span class="lang-sw">Kinachovuma Sasa</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-6">
+                <span class="lang-en">Discover the latest collections and hottest styles.</span>
+                <span class="lang-sw">Gundua mikusanyiko ya hivi punde na mitindo motomoto.</span>
+            </p>
+            <button class="bg-white text-blue-600 dark:bg-gray-900 dark:text-white font-bold py-3 px-6 rounded-xl shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-transform transform hover:scale-105">
+                <span class="lang-en">Shop Now</span>
+                <span class="lang-sw">Nunua Sasa</span>
+            </button>
+        </section>
+
+        <!-- 
+          Categories Section
+        -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">
+                <span class="lang-en">Our Categories</span>
+                <span class="lang-sw">Madaraja Yetu</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold">
+                        <span class="lang-en">Women</span>
+                        <span class="lang-sw">Wanawake</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <span class="lang-en">Clothes & Shoes</span>
+                        <span class="lang-sw">Nguo na Viatu</span>
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold">
+                        <span class="lang-en">Men</span>
+                        <span class="lang-sw">Wanaume</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <span class="lang-en">Clothes & Shoes</span>
+                        <span class="lang-sw">Nguo na Viatu</span>
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold">
+                        <span class="lang-en">Babies</span>
+                        <span class="lang-sw">Watoto</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <span class="lang-en">Clothes & Shoes</span>
+                        <span class="lang-sw">Nguo na Viatu</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          Products Section
+        -->
+        <section>
+            <h3 class="text-2xl font-bold mb-6">
+                <span class="lang-en">Women's Collection</span>
+                <span class="lang-sw">Mkusanyiko wa Wanawake</span>
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                
+                <!-- 
+                  Product Card 1
+                  - REMEMBER: Replace 'YOUR_PHONE_NUMBER'
+                -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden p-4">
+                    <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Floral+Maxi+Dress" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                        <span class="lang-en">Floral Maxi Dress</span>
+                        <span class="lang-sw">Gauni la Maxi la Maua</span>
+                    </h4>
+                    <p class="text-lg font-bold text-brand-primary dark:text-blue-400 mb-3">$59.99</p>
+                    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20Believer%20Collections%2C%20I'm%20interested%20in%20the%20Floral%20Maxi%20Dress." target="_blank" class="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                        <span class="lang-en">Order</span>
+                        <span class="lang-sw">Agiza</span>
+                        <i class="fab fa-whatsapp ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden p-4">
+                    <img src="https://placehold.co/300x300/e2e8f0/64748b?text=High-Waist+Jeans" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                        <span class="lang-en">High-Waist Jeans</span>
+                        <span class="lang-sw">Jeans ya Kiuno Juu</span>
+                    </h4>
+                    <p class="text-lg font-bold text-brand-primary dark:text-blue-400 mb-3">$45.00</p>
+                    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20Believer%20Collections%2C%20I'm%20interested%20in%20the%20High-Waist%20Jeans." target="_blank" class="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                        <span class="lang-en">Order</span>
+                        <span class="lang-sw">Agiza</span>
+                        <i class="fab fa-whatsapp ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden p-4">
+                    <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Silk+Blouse" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                        <span class="lang-en">Silk Blouse</span>
+                        <span class="lang-sw">Blauzi ya Hariri</span>
+                    </h4>
+                    <p class="text-lg font-bold text-brand-primary dark:text-blue-400 mb-3">$39.50</p>
+                    <a href="httpsT://wa.me/YOUR_PHONE_NUMBER?text=Hi%20Believer%20Collections%2C%20I'm%20interested%20in%20the%20Silk%20Blouse." target="_blank" class="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                        <span class="lang-en">Order</span>
+                        <span class="lang-sw">Agiza</span>
+                        <i class="fab fa-whatsapp ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden p-4">
+                    <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Leather+Handbag" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                        <span class="lang-en">Leather Handbag</span>
+                        <span class="lang-sw">Mkoba wa Ngozi</span>
+                    </h4>
+                    <p class="text-lg font-bold text-brand-primary dark:text-blue-400 mb-3">$89.99</p>
+                    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20Believer%20Collections%2C%20I'm%20interested%20in%20the%20Leather%20Handbag." target="_blank" class="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                        <span class="lang-en">Order</span>
+                        <span class="lang-sw">Agiza</span>
+                        <i class="fab fa-whatsapp ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden p-4">
+                    <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Casual+Sneakers" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                        <span class="lang-en">Casual Sneakers</span>
+                        <span class="lang-sw">Sneakers za Kawaida</span>
+                    </h4>
+                    <p class="text-lg font-bold text-brand-primary dark:text-blue-400 mb-3">$75.00</p>
+                    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20Believer%20Collections%2C%20I'm%20interested%20in%20the%20Casual%20Sneakers." target="_blank" class="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                        <span class="lang-en">Order</span>
+                        <span class="lang-sw">Agiza</span>
+                        <i class="fab fa-whatsapp ml-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 
+      Footer 
+    -->
+    <footer class="bg-white dark:bg-gray-800 shadow-inner mt-16 py-10">
+        <div class="container mx-auto max-w-5xl p-4 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Contact -->
+                <div>
+                    <h5 class="font-bold text-lg mb-2">
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-sw">Wasiliana Nasi</span>
+                    </h5>
+                    <p class="text-gray-600 dark:text-gray-400">+255 712 345 678</p>
+                    <p class="text-gray-600 dark:text-gray-400">+255 755 987 654</p>
+                </div>
+                
+                <!-- Email -->
+                <div>
+                    <h5 class="font-bold text-lg mb-2">
+                        <span class="lang-en">Email</span>
+                        <span class="lang-sw">Barua Pepe</span>
+                    </h5>
+                    <p class="text-gray-600 dark:text-gray-400">info@believercollections.com</p>
+                    <p class="text-gray-600 dark:text-gray-400">sales@believercollections.com</p>
+                </div>
+                
+                <!-- Location -->
+                <div>
+                    <h5 class="font-bold text-lg mb-2">
+                        <span class="lang-en">Location</span>
+                        <span class="lang-sw">Mahali</span>
+                    </h5>
+                    <p class="text-gray-600 dark:text-gray-400">123 Fashion Ave, Kariakoo</p>
+                    <p class="text-gray-600 dark:text-gray-400">Dar es Salaam, Tanzania</p>
+                </div>
+
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                <p>&copy; <span id="current-year"></span> Believer Collections and Accessories. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+      Your Custom JavaScript
+      'defer' makes it run after the HTML is parsed.
+    -->
+    <script src="script.js" defer></script>
+</body>
+</html>

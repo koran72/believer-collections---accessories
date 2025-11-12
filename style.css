@@ -1,0 +1,50 @@
+/* This file contains custom CSS. 
+  Most styling is done with Tailwind classes in index.html.
+*/
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Bilingual Toggle CSS 
+  - By default, show English (lang-en) and hide Swahili (lang-sw)
+*/
+.lang-sw {
+    display: none;
+}
+
+/* When the 'show-sw' class is added to the <html> tag:
+  - Hide English (lang-en)
+  - Show Swahili (lang-sw)
+*/
+html.show-sw .lang-en {
+    display: none;
+}
+
+/* Use 'inline-block' for elements that should flow with text,
+  like the text spans.
+*/
+html.show-sw .lang-sw {
+    display: inline-block;
+}
+
+/* Use 'block' for elements that should be on their own line,
+  like headings or paragraphs (if they were separate).
+  'inline-block' is safer for general use inside other elements.
+*/
+
+/* Fix for table rows if you add them later */
+html.show-sw .lang-en-table-row {
+    display: none;
+}
+html.show-sw .lang-sw-table-row {
+    display: table-row;
+}
+
+/* Fix for grid items if you add them later */
+html.show-sw .lang-en-grid-item {
+    display: none;
+}
+html.show-sw .lang-sw-grid-item {
+    display: grid;
+}
