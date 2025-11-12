@@ -82,45 +82,34 @@ html.show-sw .lang-sw-table-row {
   (To match your screenshot)
   =====================================================
 */
-.product-card {
-  /* No extra styles needed for the card container itself */
-  /* Tailwind handles the rest */
-}
 
 .whatsapp-button {
-  /* We use @apply to use Tailwind classes inside our CSS.
-    This keeps the design consistent.
-  */
-  @apply bg-blue-900 dark:bg-blue-800 text-white text-sm font-bold;
-  @apply py-2 px-4 rounded-full;
-  @apply flex items-center justify-center;
-  @apply transition-all duration-200;
-  @apply hover:bg-blue-700 dark:hover:bg-blue-600;
-  @apply hover:shadow-lg;
-  /* Make sure we have the WhatsApp icon color */
-  fill: currentColor; 
-}
-/* =====================================================
-  Custom Product Card Styles
-  (To match your screenshot)
-  =====================================================
-*/
-.product-card {
-  /* This class is a container, no extra styles needed */
-  /* Tailwind in index.html handles the rest */
+  /* Default (light mode) styles */
+  background-color: #1e3a8a; /* This is the "Oxford Blue" color */
+  color: white;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 700;
+  padding: 0.5rem 1rem; /* This creates the height and width */
+  border-radius: 9999px; /* This makes it rounded */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease-in-out;
+  fill: currentColor; /* This makes the WhatsApp icon white */
 }
 
-.whatsapp-button {
-  /* This is where we use @apply to use Tailwind's classes.
-    bg-blue-900 is the dark blue for light mode.
-    dark:bg-blue-800 is the slightly lighter blue for dark mode.
-  */
-  @apply bg-blue-900 dark:bg-blue-800 text-white text-sm font-bold;
-  @apply py-2 px-4 rounded-full;
-  @apply flex items-center justify-center;
-  @apply transition-all duration-200;
-  @apply hover:bg-blue-700 dark:hover:bg-blue-600;
-  @apply hover:shadow-lg;
-  /* This makes the WhatsApp icon inside the button white */
-  fill: currentColor; 
+/* Dark mode styles */
+html.dark .whatsapp-button {
+  background-color: #1e40af; /* A slightly lighter blue for dark mode */
+}
+
+/* Hover styles */
+.whatsapp-button:hover {
+  background-color: #1d4ed8; /* A brighter blue when you hover */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Dark mode hover styles */
+html.dark .whatsapp-button:hover {
+  background-color: #2563eb; /* A brighter blue for dark mode hover */
 }
