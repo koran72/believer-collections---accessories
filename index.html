@@ -112,60 +112,83 @@
     <div id="banner-slider" class="relative rounded-2xl shadow-xl overflow-hidden" style="height: 300px;">
 
         <!-- Slide 1: New Collection -->
-        <div class="slider-item active" style="background: linear-gradient(to right, #3B82F6, #6366F1);">
-            <div class="slider-content">
-                <h2 class="text-4xl font-bold mb-3">
-                    <span class="lang-en">New Collections</span>
-                    <span class="lang-sw">Mikusanyiko Mipya</span>
-                </h2>
-                <p class="text-lg text-indigo-100 mb-6">
-                    <span class="lang-en">Discover the latest collections.</span>
-                    <span class="lang-sw">Gundua mikusanyiko ya hivi punde.</span>
-                </p>
-                <a href="#featured-products" class="slider-button">
-                    <span class="lang-en">Shop Now</span>
-                    <span class="lang-sw">Nunua Sasa</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Slide 2: Big Sale -->
-        <div class="slider-item" style="background: linear-gradient(to right, #EC4899, #D946EF);">
-            <div class="slider-content">
-                <h2 class="text-4xl font-bold mb-3">
-                    <span class="lang-en">Flash Sale</span>
-                    <span class="lang-sw">Ofa ya Mwezi</span>
-                </h2>
-                <p class="text-lg text-pink-100 mb-6">
-                    <span class="lang-en">Get up to 30% off on select items.</span>
-                    <span class="lang-sw">Pata punguzo la 30% sasa.</span>
-                </p>
-                <a href="women.html" class="slider-button">
-                    <span class="lang-en">Shop Women</span>
-                    <span class="lang-sw">Nunua Wanawake</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Slide 3: Men's Style -->
-        <div class="slider-item" style="background: linear-gradient(to right, #10B981, #059669);">
-            <div class="slider-content">
-                <h2 class="text-4xl font-bold mb-3">
-                    <span class="lang-en">Men's Style</span>
-                    <span class="lang-sw">Mtindo wa Kiume</span>
-                </h2>
-                <p class="text-lg text-emerald-100 mb-6">
-                    <span class="lang-en">New shirts and shoes available.</span>
-                    <span class="lang-sw">Shati na viatu vipya vinapatikana.</span>
-                </p>
-                <a href="men.html" class="slider-button">
-                    <span class="lang-en">Shop Men</span>
-                    <span class="lang-sw">Nunua Wanaume</span>
-                </a>
-            </div>
-        </div>
-
+<div class="slider-item active">
+    <!-- Background Image -->
+    <!-- 
+      IMPORTANT: Change this 'src' to your real banner image! 
+      I'm using 'bb1.jpg' as an example.
+    -->
+    <img src="images/ms1.jpg" alt="New Collections" class="slider-bg-image">
+    <!-- Overlay (to make text readable) -->
+    <div class="slider-overlay"></div>
+    <!-- Content -->
+    <div class="slider-content">
+        <h2 class="text-4xl font-bold mb-3">
+            <span class="lang-en">New Collections</span>
+            <span class="lang-sw">Mikusanyiko Mipya</span>
+        </h2>
+        <p class="text-lg text-white mb-6"> <!-- Changed to text-white -->
+            <span class="lang-en">Discover the latest collections.</span>
+            <span class="lang-sw">Gundua mikusanyiko ya hivi punde.</span>
+        </p>
+        <a href="#featured-products" class="slider-button">
+            <span class="lang-en">Shop Now</span>
+            <span class="lang-sw">Nunua Sasa</span>
+        </a>
     </div>
+</div>
+        <!-- Slide 2: Big Sale -->
+<div class="slider-item">
+    <!-- Background Image -->
+    <!-- 
+      IMPORTANT: Change this 'src' to your real banner image! 
+      I'm using 'mnshs1.jpg' as an example.
+    -->
+    <img src="images/wm5.jpg" alt="Flash Sale" class="slider-bg-image">
+    <!-- Overlay -->
+    <div class="slider-overlay"></div>
+    <!-- Content -->
+    <div class="slider-content">
+        <h2 class="text-4xl font-bold mb-3">
+            <span class="lang-en">Flash Sale</span>
+            <span class="lang-sw">Ofa ya Mwezi</span>
+        </h2>
+        <p class="text-lg text-white mb-6"> <!-- Changed to text-white -->
+            <span class="lang-en">Get up to 30% off on select items.</span>
+            <span class="lang-sw">Pata punguzo la 30% sasa.</span>
+        </p>
+        <a href="women.html" class="slider-button">
+            <span class="lang-en">Shop Women</span>
+            <span class="lang-sw">Nunua Wanawake</span>
+        </a>
+    </div>
+</div>
+ <!-- Slide 3: Men's Style -->
+<div class="slider-item">
+    <!-- Background Image -->
+    <!-- 
+      IMPORTANT: Change this 'src' to your real banner image! 
+      I'm using 'bb4.jpg' as an example.
+    -->
+    <img src="images/mnshs1.jpg" alt="Men's Style" class="slider-bg-image">
+    <!-- Overlay -->
+    <div class="slider-overlay"></div>
+    <!-- Content -->
+    <div class="slider-content">
+        <h2 class="text-4xl font-bold mb-3">
+            <span class="lang-en">Men's Style</span>
+            <span class="lang-sw">Mtindo wa Kiume</span>
+        </h2>
+        <p class="text-lg text-white mb-6"> <!-- Changed to text-white -->
+            <span class="lang-en">New shirts and shoes available.</span>
+            <span class="lang-sw">Shati na viatu vipya vinapatikana.</span>
+        </p>
+        <a href="men.html" class="slider-button">
+            <span class="lang-en">Shop Men</span>
+            <span class="lang-sw">Nunua Wanaume</span>
+        </a>
+    </div>
+</div>
 
     <!-- Slider Dots -->
     <div id="slider-dots-container" class="flex justify-center space-x-2 mt-4">
